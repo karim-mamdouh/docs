@@ -1,0 +1,64 @@
+<section class="section">
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Basic</span>
+    </p-divider>
+    <cic-image src="assets/image/galleria.jpg" width="250"></cic-image>
+
+    <div [formGroup]="form">
+      <cic-input type="textarea" controlName="textarea1"></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea1')"
+      ></cic-button>
+    </div>
+  </div>
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Preview</span>
+    </p-divider>
+    <cic-image src="assets/image/galleria.jpg" width="250" [showPreview]="true">
+    </cic-image>
+
+    <div>
+      <cic-input
+        [formGroup]="form"
+        type="textarea"
+        controlName="textarea2"
+      ></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea2')"
+      ></cic-button>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <p-divider>
+    <span class="p-tag"> Indicator Templating</span>
+  </p-divider>
+  <cic-image
+    src="assets/image/galleria.jpg"
+    width="450"
+    [showPreview]="true"
+    [customPreview]="true"
+  >
+    any content
+    <i class="pi pi-eye"></i>
+  </cic-image>
+
+  <div>
+    <cic-input
+      [formGroup]="form"
+      type="textarea"
+      controlName="textarea3"
+    ></cic-input>
+    <cic-button
+      btnIcon="pi-copy"
+      label="Copy"
+      (click)="clicked('textarea3')"
+    ></cic-button>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<h1>Calendar</h1>
+<p>
+  CIC-Calendar is a generic component that contains all shapes & formats for
+  calendars/time pickers
+</p>
+<h3>Import</h3>
+<div class="container">
+  <code>{{ "import { CICCalendarModule } from 'cic-core-library'" }}</code>
+</div>
+
+<h3>Basic usage</h3>
+<p class="subtitle">
+  Component needs to be wrapped with
+  <span>form group ('form') & form control name ('formControl')</span> should be
+  provided
+</p>
+<div class="container">
+  <code>{{ usage }}</code>
+</div>
+
+<div class="table-container">
+  <cic-data-table [tableColumns]="propertyHeaders" [data]="properties">
+    <ng-container caption><h3>Properties</h3></ng-container>
+  </cic-data-table>
+</div>

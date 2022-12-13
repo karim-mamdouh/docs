@@ -1,0 +1,167 @@
+<div class="btn-container">
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Severity</span>
+    </p-divider>
+    <div class="button-group">
+      <cic-button label="Info"></cic-button>
+      <cic-button label="Secondary" severity="secondary"></cic-button>
+      <cic-button label="Success" severity="success"></cic-button>
+      <cic-button label="Warning" severity="warning"></cic-button>
+      <cic-button label="Danger" severity="danger"></cic-button>
+      <cic-button label="Help" severity="help"></cic-button>
+    </div>
+    <form [formGroup]="form">
+      <cic-input
+        controlName="textarea1"
+        type="textarea"
+        [autoSize]="true"
+        [rows]="14"
+      ></cic-input>
+      <!-- <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea2')"
+        ></cic-button> -->
+    </form>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Sizes</span>
+    </p-divider>
+    <div class="button-group">
+      <cic-button size="sm" label="Small"></cic-button>
+      <cic-button label="Medium"></cic-button>
+      <cic-button size="lg" label="Large"></cic-button>
+    </div>
+    <form [formGroup]="form">
+      <cic-input
+        controlName="textarea2"
+        type="textarea"
+        [autoSize]="true"
+        [rows]="8"
+      ></cic-input>
+      <!-- <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea2')"
+        ></cic-button> -->
+    </form>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Shapes</span>
+    </p-divider>
+    <div class="button-group">
+      <cic-button label="Rounded" [isRounded]="true"></cic-button>
+      <cic-button label="Outline" [isOutline]="true"></cic-button>
+      <cic-button label="Text" [isText]="true"></cic-button>
+      <cic-button label="Raised" [isRaised]="true"></cic-button>
+      <cic-button
+        label="Rounded Outline"
+        [isRounded]="true"
+        [isOutline]="true"
+        severity="success"
+      ></cic-button>
+      <cic-button
+        label="Rounded Text"
+        [isRounded]="true"
+        [isText]="true"
+        severity="success"
+      ></cic-button>
+      <cic-button
+        label="Rounded Raised"
+        [isRounded]="true"
+        [isRaised]="true"
+        severity="success"
+      ></cic-button>
+    </div>
+    <form [formGroup]="form">
+      <cic-input
+        controlName="textarea3"
+        type="textarea"
+        [autoSize]="true"
+        [rows]="20"
+      ></cic-input>
+      <!-- <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea2')"
+        ></cic-button> -->
+    </form>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Icons</span>
+    </p-divider>
+    <div class="button-group">
+      <cic-button
+        label="Text & Icon"
+        btnIcon="pi-check"
+        severity="success"
+      ></cic-button>
+      <cic-button
+        label="Icon position"
+        btnIcon="pi-search"
+        iconPos="right"
+      ></cic-button>
+      <cic-button btnIcon="pi-heart" severity="danger"></cic-button>
+      <cic-button
+        [isOutline]="true"
+        btnIcon="pi-star-fill"
+        severity="warning"
+      ></cic-button>
+    </div>
+    <form [formGroup]="form">
+      <cic-input
+        controlName="textarea4"
+        type="textarea"
+        [autoSize]="true"
+        [rows]="11"
+      ></cic-input>
+      <!-- <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea2')"
+        ></cic-button> -->
+    </form>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Button with badge</span>
+    </p-divider>
+    <div class="button-group">
+      <cic-button
+        mode="badge"
+        badgeValue="5"
+        label="Badge"
+        badgeSeverity="danger"
+      ></cic-button>
+      <cic-button
+        mode="badge"
+        badgeValue="10"
+        label="Badge with icon"
+        btnIcon="pi-star"
+        severity="success"
+        badgeSeverity="warning"
+      ></cic-button>
+    </div>
+    <form [formGroup]="form">
+      <cic-input
+        controlName="textarea5"
+        type="textarea"
+        [autoSize]="true"
+        [rows]="5"
+      ></cic-input>
+      <!-- <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea2')"
+        ></cic-button> -->
+    </form>
+  </div>
+</div>

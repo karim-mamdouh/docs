@@ -1,0 +1,258 @@
+<form [formGroup]="form">
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Dropdown with basic label</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-dropdown
+        [data]="data"
+        controlName="control"
+        label="Countries"
+        placeholder="Countries"
+      ></cic-dropdown>
+      <div>
+        <cic-input type="textarea" controlName="textarea1"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea1')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Dropdown with floatlabel</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-dropdown
+        [floatLabel]="true"
+        [data]="data"
+        controlName="control"
+        label="Countries"
+        placeholder="Countries"
+      ></cic-dropdown>
+      <div>
+        <cic-input type="textarea" controlName="textarea2"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea2')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Dropdown with auto-complete</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-dropdown
+        [floatLabel]="true"
+        [data]="data"
+        controlName="control"
+        label="Countries"
+        placeholder="Countries"
+        [autoComplete]="true"
+      ></cic-dropdown>
+      <div>
+        <cic-input type="textarea" controlName="textarea3"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea3')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Dropdown with multi-select</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-dropdown
+        [floatLabel]="true"
+        [data]="data"
+        controlName="control"
+        label="Countries"
+        placeholder="Countries"
+        [multiSelect]="true"
+      ></cic-dropdown>
+      <div>
+        <cic-input type="textarea" controlName="textarea4"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea4')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Dropdown with search bar</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-dropdown
+        [floatLabel]="true"
+        [data]="data"
+        controlName="control"
+        label="Countries"
+        placeholder="Countries"
+        [enableFilter]="true"
+      ></cic-dropdown>
+      <div>
+        <cic-input type="textarea" controlName="textarea5"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea5')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Dropdown with clear button</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-dropdown
+        [floatLabel]="true"
+        [data]="data"
+        controlName="control"
+        label="Countries"
+        placeholder="Countries"
+        [showClear]="true"
+      ></cic-dropdown>
+      <div>
+        <cic-input type="textarea" controlName="textarea6"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea6')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Dropdown with chip selection</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-dropdown
+        [floatLabel]="true"
+        [data]="data"
+        controlName="control"
+        label="Countries"
+        placeholder="Countries"
+        [multiSelect]="true"
+        multiSelectMode="chip"
+      ></cic-dropdown>
+      <div>
+        <cic-input
+          type="textarea"
+          controlName="textarea7"
+          [autoSize]="true"
+          [rows]="3"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea7')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Dropdown with flags</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-dropdown
+        [floatLabel]="true"
+        [data]="data"
+        controlName="control"
+        label="Countries"
+        placeholder="Countries"
+        mode="text-flag"
+      ></cic-dropdown>
+      <div>
+        <cic-input type="textarea" controlName="textarea8"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea8')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Dropdown with rounded flags</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-dropdown
+        [floatLabel]="true"
+        [data]="data"
+        controlName="control"
+        label="Countries"
+        placeholder="Countries"
+        [roundedFlagIcon]="true"
+        mode="text-flag"
+        [multiSelect]="true"
+      ></cic-dropdown>
+      <div>
+        <cic-input
+          type="textarea"
+          controlName="textarea9"
+          [autoSize]="true"
+          [rows]="3"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea9')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Dropdown with icons</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-dropdown
+        [floatLabel]="true"
+        [data]="data"
+        controlName="control"
+        label="Countries"
+        placeholder="Countries"
+        mode="text-icon"
+      ></cic-dropdown>
+      <div>
+        <cic-input type="textarea" controlName="textarea10"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea10')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <cic-input
+    type="textarea"
+    controlName="textarea11"
+    label="TS"
+    [autoSize]="true"
+    [rows]="7"
+  ></cic-input>
+</form>

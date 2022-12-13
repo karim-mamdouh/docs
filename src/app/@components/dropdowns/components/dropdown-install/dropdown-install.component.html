@@ -1,0 +1,44 @@
+<h1>Dropdown</h1>
+<p>
+  CIC-Dropdown is a generic component that contains all dropdown formats & types
+</p>
+<h3>Import</h3>
+<div class="container">
+  <code>{{ "import { CICDropdownModule } from 'cic-core-library'" }}</code>
+</div>
+
+<h3>Basic usage</h3>
+<p class="subtitle">
+  Component needs to be wrapped with
+  <span>form group ('form') & form control name ('formControl')</span> should be
+  provided
+</p>
+<div class="container">
+  <code>{{ usage }}</code>
+</div>
+
+<div class="details-container">
+  <p-tabView>
+    <p-tabPanel header="Properties" leftIcon="pi pi-cog">
+      <div class="table-container">
+        <cic-data-table [data]="properties" [tableColumns]="propertyHeaders"
+          ><ng-container caption
+            ><h3>Properties</h3></ng-container
+          ></cic-data-table
+        >
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Interfaces" leftIcon="pi-list pi">
+      <div class="table-container">
+        <cic-data-table
+          [data]="interfaces"
+          [tableColumns]="eventInterfaceHeaders"
+          summaryMessage="* ? indicates optional parameter *"
+          ><ng-container caption
+            ><h3>&lt;DropDownItem&gt; Interface</h3></ng-container
+          ></cic-data-table
+        >
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+</div>

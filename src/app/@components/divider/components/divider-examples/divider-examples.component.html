@@ -1,0 +1,127 @@
+<form [formGroup]="form">
+  <div class="container">
+    <span class="p-tag"> Basic</span><br /><br /><br /><br />
+    <cic-divider layout="horizontal"></cic-divider>
+  </div>
+  <br /><br />
+  <div>
+    <cic-input type="textarea" controlName="textarea0"></cic-input>
+    <cic-button
+      btnIcon="pi-copy"
+      label="Copy"
+      (click)="clicked('textarea0')"
+    ></cic-button>
+  </div>
+  <br />
+  <div class="container">
+    <span class="p-tag"> Text with Dashed Style left|center|right</span
+    ><br /><br />
+    <cic-divider
+      [align]="'center'"
+      layout="horizontal"
+      label="Center"
+    ></cic-divider>
+    <br />
+    <br />
+    <div>
+      <cic-input type="textarea" controlName="textarea1"></cic-input>
+      <cic-button label="Copy" (click)="clicked('textarea1')"></cic-button>
+    </div>
+  </div>
+  <br />
+  <div class="container">
+    <span class="p-tag"> Content icon</span><br /><br /><br />
+    <cic-divider
+      label="icon"
+      [align]="'center'"
+      [mode]="'icon'"
+      icon="pi-times"
+      layout="horizontal"
+      iconPos="right"
+    ></cic-divider>
+    <br />
+    <br />
+    <div>
+      <cic-input type="textarea" controlName="textarea2"></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea2')"
+      ></cic-button>
+    </div>
+  </div>
+  <br />
+  <div class="container">
+    <span class="p-tag"> Content icon</span><br /><br /><br />
+    <cic-divider
+      label="Header"
+      layout="horizontal"
+      [align]="'right'"
+      [mode]="'badge'"
+    ></cic-divider>
+    <br />
+    <br />
+    <div>
+      <cic-input type="textarea" controlName="textarea3"></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea3')"
+      ></cic-button>
+    </div>
+  </div>
+  <br />
+  <div class="container">
+    <span class="p-tag"> Content Button</span><br /><br /><br />
+    <cic-divider mode="custom" [align]="'right'" layout="horizontal">
+      <cic-button btnIcon="pi-copy" label="Button"></cic-button> </cic-divider
+    ><br />
+    <br />
+    <div>
+      <cic-input type="textarea" controlName="textarea4"></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea4')"
+      ></cic-button>
+    </div>
+  </div>
+  <br />
+  <div class="container">
+    <span class="p-tag"> Layout</span><br /><br /><br />
+    <div class="flex">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, suscipit.
+      <cic-divider layout="vertical" label="or" align="center"></cic-divider>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, suscipit.
+    </div>
+    <br />
+    <br />
+    <div>
+      <cic-input type="textarea" controlName="textarea5"></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea5')"
+      ></cic-button>
+    </div>
+  </div>
+  <br /><br />
+  <div class="container">
+    <span class="p-tag"> Type</span><br /><br /><br />
+    <div class="flex">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, suscipit.
+      <cic-divider layout="vertical" type="dashed"></cic-divider>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, suscipit.
+    </div>
+    <br />
+    <br />
+    <div>
+      <cic-input type="textarea" controlName="textarea6"></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea6')"
+      ></cic-button>
+    </div>
+  </div>
+</form>

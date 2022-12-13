@@ -1,0 +1,738 @@
+<form [formGroup]="_form">
+  <!-- bar -->
+  <legend>
+    <h1>Bar -Charts</h1>
+    <div class="container">
+      <p-divider>
+        <span class="p-tag"> Basic</span>
+      </p-divider>
+      <cic-charts
+        [chartData]="data"
+        [chartDimensions]="[600, 300]"
+        [showLegend]="true"
+        [showXAxisLabel]="true"
+        [showXAxis]="true"
+        [gradient]="false"
+        [showYAxis]="true"
+        [showYAxisLabel]="true"
+        [colorScheme]="colorScheme"
+        legendTitle=" A countrys is a distinct part of the world."
+        [xAxisLabel]="'Countrys'"
+        [yAxisLabel]="'Frequency'"
+      ></cic-charts>
+      <div class="text">
+        <div class="inputText">
+          <cic-input
+            styleClass="styleText"
+            type="textarea"
+            controlName="textarea1"
+          ></cic-input>
+        </div>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea1')"
+        ></cic-button>
+      </div>
+    </div>
+    <!-- Grouped Vertical -->
+    <div class="container-vertical">
+      <p-divider>
+        <span class="p-tag"> Grouped Vertical</span>
+      </p-divider>
+      <cic-charts
+        mode="bar-vertical-2d"
+        [chartData]="multi"
+        [chartDimensions]="[700, 400]"
+        [showLegend]="true"
+        [showXAxisLabel]="true"
+        [showXAxis]="true"
+        [gradient]="true"
+        [showYAxis]="true"
+        [showYAxisLabel]="true"
+        [colorScheme]="colorScheme"
+        legendTitle=" A countrys is a distinct part of the world."
+        [xAxisLabel]="'Countrys'"
+        [yAxisLabel]="'Frequency'"
+      ></cic-charts>
+    </div>
+    <div class="text">
+      <div class="inputText">
+        <cic-input
+          styleClass="styleText"
+          type="textarea"
+          controlName="bar7"
+        ></cic-input>
+      </div>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('bar7')"
+      ></cic-button>
+    </div>
+
+    <div class="container">
+      <p-divider>
+        <span class="p-tag"> Grouped Horizontal</span>
+      </p-divider>
+      <cic-charts
+        mode="bar-horizontal-2d"
+        [chartData]="multi"
+        [chartDimensions]="[700, 400]"
+        [showLegend]="true"
+        [showXAxisLabel]="true"
+        [schemeType]="'linear'"
+        [showXAxis]="true"
+        [gradient]="false"
+        [showYAxis]="true"
+        [showYAxisLabel]="true"
+        [colorScheme]="colorScheme"
+        legendTitle=" A countrys is a distinct part of the world."
+        [xAxisLabel]="'Countrys'"
+        [yAxisLabel]="'Frequency'"
+      ></cic-charts>
+      <div class="text">
+        <div class="inputText">
+          <cic-input
+            styleClass="styleText"
+            type="textarea"
+            controlName="bar1"
+          ></cic-input>
+        </div>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('bar1')"
+        ></cic-button>
+      </div>
+    </div>
+
+    <!-- Horizontal Bar -->
+    <div class="container-grid">
+      <p-divider>
+        <span class="p-tag"> Horizontal Bar </span>
+      </p-divider>
+      <cic-charts
+        mode="bar-horizontal"
+        [chartData]="data"
+        [chartDimensions]="[600, 300]"
+        [colorScheme]="colorScheme"
+        [gradient]="false"
+        [showLegend]="true"
+        [showYAxisLabel]="true"
+        [showXAxisLabel]="true"
+        [showXAxis]="true"
+        [showYAxis]="true"
+        [xAxisLabel]="'Countrys'"
+        [yAxisLabel]="'Frequency'"
+      ></cic-charts>
+    </div>
+    <div class="text">
+      <div class="inputText">
+        <cic-input
+          styleClass="styleText"
+          type="textarea"
+          controlName="bar2"
+        ></cic-input>
+      </div>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('bar2')"
+      ></cic-button>
+    </div>
+    <!-- Horizontal-Normalized -->
+    <div class="container-grid">
+      <p-divider>
+        <span class="p-tag"> Horizontal-Normalized </span>
+      </p-divider>
+      <cic-charts
+        mode="horizontal-normalized"
+        [chartData]="multi"
+        [chartDimensions]="[600, 300]"
+        [colorScheme]="colorScheme"
+        [gradient]="true"
+        [showLegend]="true"
+        [showYAxisLabel]="true"
+        [showXAxis]="true"
+        [showYAxis]="true"
+        [showXAxisLabel]="true"
+        [xAxisLabel]="'Countrys'"
+        [yAxisLabel]="'Frequency'"
+      ></cic-charts>
+    </div>
+    <div class="text">
+      <div class="inputText">
+        <cic-input
+          styleClass="styleText"
+          type="textarea"
+          controlName="bar3"
+        ></cic-input>
+      </div>
+
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('bar3')"
+      ></cic-button>
+    </div>
+    <!--  -->
+    <div class="container-grid">
+      <p-divider>
+        <span class="p-tag">Normalized Vertical </span>
+      </p-divider>
+      <cic-charts
+        mode="vertical-normalized"
+        [chartData]="multi"
+        [chartDimensions]="[600, 300]"
+        [colorScheme]="colorScheme"
+        [gradient]="true"
+        [showLegend]="true"
+        [showYAxisLabel]="true"
+        [showXAxis]="true"
+        [showYAxis]="true"
+        [showXAxisLabel]="true"
+        [xAxisLabel]="'Countrys'"
+        [yAxisLabel]="'Frequency'"
+      ></cic-charts>
+    </div>
+    <div class="text">
+      <div class="inputText">
+        <cic-input
+          styleClass="styleText"
+          type="textarea"
+          controlName="bar4"
+        ></cic-input>
+      </div>
+
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('bar4')"
+      ></cic-button>
+    </div>
+    <div class="container-vertical">
+      <p-divider>
+        <span class="p-tag">Stacked Horizontal </span>
+      </p-divider>
+      <cic-charts
+        mode="horizontal-stacked"
+        [chartData]="multi"
+        [chartDimensions]="[700, 400]"
+        [colorScheme]="colorScheme"
+        [gradient]="false"
+        [showLegend]="true"
+        [showYAxisLabel]="true"
+        [showXAxis]="true"
+        [showYAxis]="true"
+        [showXAxisLabel]="true"
+        [xAxisLabel]="'Countrys'"
+        [yAxisLabel]="'Frequency'"
+      ></cic-charts>
+    </div>
+    <div class="text">
+      <div class="inputText">
+        <cic-input
+          styleClass="styleText"
+          type="textarea"
+          controlName="bar5"
+        ></cic-input>
+      </div>
+
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('bar5')"
+      ></cic-button>
+    </div>
+    <div class="container-vertical">
+      <p-divider>
+        <span class="p-tag">Stacked Vertical </span>
+      </p-divider>
+      <cic-charts
+        mode="vertical-stacked"
+        [chartData]="multi"
+        [chartDimensions]="[700, 400]"
+        [colorScheme]="colorScheme"
+        [gradient]="false"
+        [showLegend]="true"
+        [showYAxisLabel]="true"
+        [showXAxis]="true"
+        [showYAxis]="true"
+        [showXAxisLabel]="true"
+        [xAxisLabel]="'Countrys'"
+        [animations]="true"
+        [yAxisLabel]="'Frequency'"
+      ></cic-charts>
+    </div>
+    <div class="text">
+      <div class="inputText">
+        <cic-input
+          styleClass="styleText"
+          type="textarea"
+          controlName="bar6"
+        ></cic-input>
+      </div>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('bar6')"
+      ></cic-button>
+    </div>
+  </legend>
+  <legend>
+    <h1>Pie Charts</h1>
+    <!-- Pie Chart -->
+    <div class="container-grid">
+      <p-divider>
+        <span class="p-tag"> Pie-Chart</span>
+      </p-divider>
+      <cic-charts
+        mode="pie-chart"
+        [chartData]="data"
+        [chartDimensions]="[600, 200]"
+        [colorScheme]="colorScheme"
+        [showLegend]="true"
+        [isDoughnut]="false"
+        [labels]="true"
+        [gradient]="true"
+        legendTitle="Product Sale Report"
+        [xAxisLabel]="'Countrys'"
+        [yAxisLabel]="'pie-chart'"
+      ></cic-charts>
+    </div>
+    <div class="text">
+      <div class="inputText">
+        <cic-input
+          styleClass="styleText"
+          type="textarea"
+          controlName="textarea2"
+        ></cic-input>
+      </div>
+
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea2')"
+      ></cic-button>
+    </div>
+    <!-- Advanced-pie-chart  -->
+    <div class="container">
+      <p-divider>
+        <span class="p-tag"> Advanced-pie-chart</span>
+      </p-divider>
+      <cic-charts
+        mode="advanced-pie-chart"
+        [gradient]="true"
+        [chartData]="data"
+        [chartDimensions]="[600, 200]"
+        [colorScheme]="colorScheme"
+      ></cic-charts>
+      <br />
+      <div class="text">
+        <div class="inputText">
+          <cic-input
+            styleClass="styleText"
+            type="textarea"
+            controlName="textarea3"
+          ></cic-input>
+        </div>
+
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea3')"
+        ></cic-button>
+      </div>
+    </div>
+    <br />
+    <!-- pie-grid -->
+    <div class="container-grid">
+      <p-divider>
+        <span class="p-tag"> pie-grid</span>
+      </p-divider>
+      <cic-charts
+        mode="pie-grid"
+        [chartData]="data"
+        [chartDimensions]="[600, 300]"
+        [colorScheme]="colorScheme"
+      ></cic-charts
+      ><br />
+    </div>
+    <div>
+      <cic-input type="textarea" controlName="textarea4"></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea4')"
+      ></cic-button>
+    </div>
+  </legend>
+  <br /><br /><br />
+  <legend>
+    <h1>Line-Area-Charts</h1>
+    <!--Area Chart  -->
+    <div class="container-Area">
+      <p-divider>
+        <span class="p-tag"> Area Chart</span>
+      </p-divider>
+      <cic-charts
+        mode="area-char"
+        [showLegend]="true"
+        [showXAxis]="true"
+        [showYAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [timeline]="true"
+        [chartData]="multi"
+        [chartDimensions]="[700, 400]"
+        [colorScheme]="colorScheme"
+        [yAxisLabel]="'Year'"
+        [xAxisLabel]="'Country'"
+      ></cic-charts>
+      <div class="text-Areaa">
+        <div class="inputText">
+          <cic-input
+            styleClass="styleText"
+            type="textarea"
+            controlName="textarea11"
+          ></cic-input>
+        </div>
+
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea11')"
+        ></cic-button>
+      </div>
+    </div>
+    <br />
+    <!-- Normalized Area -->
+    <div class="container-Area">
+      <p-divider>
+        <span class="p-tag"> Normalized Area</span>
+      </p-divider>
+      <cic-charts
+        mode="area-chart-normalized"
+        [showLegend]="true"
+        [showXAxis]="true"
+        [showYAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [timeline]="true"
+        [chartData]="multi"
+        [chartDimensions]="[700, 400]"
+        [colorScheme]="colorScheme"
+        [yAxisLabel]="'Year'"
+        [xAxisLabel]="'Country'"
+      ></cic-charts>
+      <div class="text-Areaa">
+        <div class="inputText">
+          <cic-input
+            styleClass="styleText"
+            type="textarea"
+            controlName="textarea12"
+          ></cic-input>
+        </div>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea12')"
+        ></cic-button>
+      </div>
+    </div>
+    <br />
+    <!--Stacked Area  -->
+    <div class="container-Area">
+      <p-divider>
+        <span class="p-tag">Stacked Areaa</span>
+      </p-divider>
+      <cic-charts
+        mode="area-chart-stacked"
+        [showLegend]="true"
+        [showXAxis]="true"
+        [showYAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [timeline]="true"
+        [chartData]="multi"
+        [chartDimensions]="[700, 400]"
+        [colorScheme]="colorScheme"
+        [yAxisLabel]="'Year'"
+        [xAxisLabel]="'Country'"
+      ></cic-charts>
+      <div class="text-Areaa">
+        <div class="inputText">
+          <cic-input
+            styleClass="styleText"
+            type="textarea"
+            controlName="textarea13"
+          ></cic-input>
+        </div>
+
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea13')"
+        ></cic-button>
+      </div>
+    </div>
+    <br />
+    <!-- Line Chart -->
+
+    <div class="container-Area">
+      <p-divider>
+        <span class="p-tag"> Line Chart</span>
+      </p-divider>
+      <cic-charts
+        mode="line-chart"
+        [showLegend]="true"
+        [showXAxis]="true"
+        [showYAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [chartData]="multi"
+        [chartDimensions]="[700, 300]"
+        [colorScheme]="colorScheme"
+        [yAxisLabel]="'Year'"
+        [xAxisLabel]="'Country'"
+      ></cic-charts>
+
+      <div class="text-Areaa">
+        <div class="inputText">
+          <cic-input
+            styleClass="styleText"
+            type="textarea"
+            controlName="textarea14"
+          ></cic-input>
+        </div>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea14')"
+        ></cic-button>
+      </div>
+    </div>
+    <!-- Polar/radar -->
+    <div class="container-vertical">
+      <p-divider>
+        <span class="p-tag"> Polar/radar</span>
+      </p-divider>
+      <cic-charts
+        mode="pola"
+        [showLegend]="true"
+        [showXAxis]="true"
+        [showYAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [chartData]="multi"
+        [chartDimensions]="[500, 300]"
+        [colorScheme]="colorScheme"
+        [yAxisLabel]="'Year'"
+        [xAxisLabel]="'Country'"
+      ></cic-charts>
+    </div>
+    <div class="text">
+      <div class="inputText">
+        <cic-input
+          styleClass="styleText"
+          type="textarea"
+          controlName="textarea7"
+        ></cic-input>
+      </div>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea7')"
+      ></cic-button>
+    </div>
+  </legend>
+  <!--  Gauge Chart -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Gauge Chart</span>
+    </p-divider>
+    <cic-charts
+      mode="gauge"
+      [showLegend]="true"
+      [chartData]="data"
+      [chartDimensions]="[500, 400]"
+      [colorScheme]="colorScheme"
+    ></cic-charts>
+
+    <div class="text">
+      <div class="inputText">
+        <cic-input
+          styleClass="styleText"
+          type="textarea"
+          controlName="textarea5"
+        ></cic-input>
+      </div>
+
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea5')"
+      ></cic-button>
+    </div>
+  </div>
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Heat Map</span>
+    </p-divider>
+    <cic-charts
+      mode="heat-map"
+      [showLegend]="true"
+      [showXAxis]="true"
+      [showYAxis]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [chartData]="multi"
+      [chartDimensions]="[500, 400]"
+      [colorScheme]="colorScheme"
+      [yAxisLabel]="'Year'"
+      [xAxisLabel]="'Country'"
+    ></cic-charts>
+
+    <div class="text">
+      <div class="inputText">
+        <cic-input
+          styleClass="styleText"
+          type="textarea"
+          controlName="textarea6"
+        ></cic-input>
+      </div>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea6')"
+      ></cic-button>
+    </div>
+  </div>
+  <!-- Linerar Gaugap -->
+  <div class="container-vertical">
+    <p-divider>
+      <span class="p-tag">Linear Gaugep</span>
+    </p-divider>
+    <cic-charts
+      mode="linear-gauge"
+      [value]="value"
+      [chartDimensions]="[400, 300]"
+      [colorScheme]="colorScheme"
+      [previousValue]="previousValue"
+      [xAxisLabel]="'Country'"
+    ></cic-charts>
+  </div>
+  <div class="text">
+    <div class="inputText">
+      <cic-input
+        styleClass="styleText"
+        type="textarea"
+        controlName="textarea8"
+      ></cic-input>
+    </div>
+    <cic-button
+      btnIcon="pi-copy"
+      label="Copy"
+      (click)="clicked('textarea8')"
+    ></cic-button>
+  </div>
+  <!--Tree map  -->
+  <div class="container-grid">
+    <p-divider>
+      <span class="p-tag"> Tree Map</span>
+    </p-divider>
+    <cic-charts
+      mode="tree-map"
+      [chartData]="data"
+      [chartDimensions]="[500, 300]"
+      [animations]="true"
+      [colorScheme]="colorScheme"
+      [legendTitle]="'Country'"
+    ></cic-charts>
+  </div>
+
+  <div class="text">
+    <div class="inputText">
+      <cic-input
+        styleClass="styleText"
+        type="textarea"
+        controlName="textarea9"
+      ></cic-input>
+    </div>
+    <cic-button
+      btnIcon="pi-copy"
+      label="Copy"
+      (click)="clicked('textarea9')"
+    ></cic-button>
+  </div>
+  <br />
+  <!--  Number Card  -->
+  <div class="container-vertical">
+    <p-divider>
+      <span class="p-tag"> Number Card </span>
+    </p-divider>
+    <cic-charts
+      mode="number-card"
+      [chartData]="data"
+      [chartDimensions]="[500, 400]"
+      [animations]="true"
+      [colorScheme]="colorScheme"
+      textColor="white"
+      [cardColor]="'brown'"
+    ></cic-charts>
+  </div>
+  <div class="text">
+    <div class="inputText">
+      <cic-input
+        styleClass="styleText"
+        type="textarea"
+        controlName="textarea10"
+      ></cic-input>
+    </div>
+    <cic-button
+      btnIcon="pi-copy"
+      label="Copy"
+      (click)="clicked('textarea10')"
+    ></cic-button>
+  </div>
+  <!--  -->
+  <div class="container-vertical">
+    <p-divider>
+      <span class="p-tag"> Number Card </span>
+    </p-divider>
+    <cic-charts
+      mode="bubble-chart"
+      [chartDimensions]="[700, 400]"
+      [colorScheme]="colorScheme"
+      [chartData]="bubbleData"
+      [showXAxis]="true"
+      [showYAxis]="true"
+      [showLegend]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Population'"
+      [yAxisLabel]="'Years'"
+      [xScaleMin]="20"
+      [xScaleMax]="20"
+      [yScaleMin]="70"
+      [yScaleMax]="85"
+      [minRadius]="5"
+      [maxRadius]="20"
+    ></cic-charts>
+  </div>
+  <div class="text">
+    <div class="inputText">
+      <cic-input
+        styleClass="styleText"
+        type="textarea"
+        controlName="textarea15"
+      ></cic-input>
+    </div>
+    <cic-button
+      btnIcon="pi-copy"
+      label="Copy"
+      (click)="clicked('textarea15')"
+    ></cic-button>
+  </div>
+</form>

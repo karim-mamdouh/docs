@@ -1,0 +1,31 @@
+h1 {
+  margin-bottom: 25px;
+}
+.container {
+  background-color: #eff3f8a5;
+  padding: 30px;
+  border-radius: 20px;
+}
+h3 {
+  margin: 30px 0 10px 10px;
+}
+.subtitle {
+  margin: 0 0 10px 10px;
+  font-size: 0.9rem;
+  span {
+    color: orange;
+    font-weight: 600;
+  }
+}
+.table-container {
+  margin-top: 50px;
+  h3 {
+    margin: 20px 0;
+  }
+}
+.code-block {
+  margin-bottom: 20px;
+}
+code {
+  white-space: pre;
+}

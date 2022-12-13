@@ -1,0 +1,83 @@
+<h1>DataTable</h1>
+<p>
+  CIC-DataTable is a generic component that generates a custom table based on
+  config provided
+</p>
+<h3>Import</h3>
+<div class="container">
+  <code>{{ "import { CICDataTableModule } from 'cic-core-library'" }}</code>
+</div>
+
+<h3>Basic usage</h3>
+<p class="subtitle">
+  Component needs to be provided with
+  <span>tableColumns array 'columns'</span> which is considered as the columns
+  configuration &<span> data array 'tableData'</span>which is the data that will
+  be shown in the table rows should be provided
+</p>
+<div class="container">
+  <div class="code-block">
+    <h5>HTML</h5>
+    <code>{{ usage }}</code>
+  </div>
+  <div>
+    <h5>TS</h5>
+    <code>{{ usageTs }}</code>
+  </div>
+</div>
+
+<div class="details-container">
+  <p-tabView>
+    <p-tabPanel header="Properties" leftIcon="pi pi-cog">
+      <div class="table-container">
+        <cic-data-table [data]="properties" [tableColumns]="propertyHeaders"
+          ><ng-container caption
+            ><h3>Properties</h3></ng-container
+          ></cic-data-table
+        >
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Interfaces" leftIcon="pi-list pi">
+      <div class="table-container">
+        <cic-data-table
+          [data]="interfaces.tableColumn"
+          [tableColumns]="eventInterfaceHeaders"
+          summaryMessage="* ? indicates optional parameter *"
+          ><ng-container caption
+            ><h3>&lt;TableColumn&gt; Interface</h3></ng-container
+          ></cic-data-table
+        >
+      </div>
+      <div class="table-container">
+        <cic-data-table
+          [data]="interfaces.buttonConfig"
+          [tableColumns]="eventInterfaceHeaders"
+          summaryMessage="* ? indicates optional parameter *"
+          ><ng-container caption
+            ><h3>&lt;ButtonConfig&gt; Interface</h3></ng-container
+          ></cic-data-table
+        >
+      </div>
+      <div class="table-container">
+        <cic-data-table
+          [data]="interfaces.state"
+          [tableColumns]="eventInterfaceHeaders"
+          summaryMessage="* ? indicates optional parameter *"
+          ><ng-container caption
+            ><h3>&lt;State&gt; Interface</h3></ng-container
+          ></cic-data-table
+        >
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Events" leftIcon="pi-eject pi">
+      <div class="table-container">
+        <cic-data-table
+          [data]="events"
+          [tableColumns]="eventInterfaceHeaders"
+          summaryMessage="* ? indicates optional parameter *"
+          ><ng-container caption><h3>Events</h3></ng-container></cic-data-table
+        >
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+</div>

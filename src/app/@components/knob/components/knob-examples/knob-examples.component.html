@@ -1,0 +1,151 @@
+<form [formGroup]="form">
+  <section class="section">
+    <div class="container">
+      <p-divider>
+        <span class="p-tag"> Basic</span>
+      </p-divider>
+      <cic-knob [value]="number"></cic-knob>
+      <br />
+      <div>
+        <cic-input type="textarea" controlName="textarea1"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea1')"
+        ></cic-button>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+      <p-divider>
+        <span class="p-tag"> Red only</span>
+      </p-divider>
+      <cic-knob [value]="number" [readOnly]="true"></cic-knob>
+      <br />
+      <div>
+        <cic-input type="textarea" controlName="textarea2"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea2')"
+        ></cic-button>
+      </div>
+    </div>
+  </section>
+  <br />
+  <br />
+
+  <section class="section">
+    <div class="container">
+      <p-divider>
+        <span class="p-tag"> Template</span>
+      </p-divider>
+      <cic-knob [value]="number" [valueTemplate]="'%'"></cic-knob>
+      <br />
+      <div>
+        <cic-input type="textarea" controlName="textarea3"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea3')"
+        ></cic-button>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+      <p-divider>
+        <span class="p-tag"> Min/Max</span>
+      </p-divider>
+      <cic-knob
+        [value]="number"
+        labe
+        [minValue]="-90"
+        [maxValue]="90"
+      ></cic-knob>
+      <br />
+      <div>
+        <cic-input type="textarea" controlName="textarea4"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea4')"
+        ></cic-button>
+      </div>
+    </div>
+  </section>
+  <br />
+
+  <section class="section">
+    <div class="container">
+      <p-divider>
+        <span class="p-tag"> Stroke</span>
+      </p-divider>
+      <cic-knob [value]="number" [strokeWidth]="20"></cic-knob>
+      <br />
+      <div>
+        <cic-input type="textarea" controlName="textarea5"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea5')"
+        ></cic-button>
+      </div>
+    </div>
+    <div class="container">
+      <p-divider>
+        <span class="p-tag"> Step</span>
+      </p-divider>
+      <cic-knob [value]="number" [step]="20"></cic-knob>
+      <br />
+      <div>
+        <cic-input type="textarea" controlName="textarea6"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea6')"
+        ></cic-button>
+      </div>
+    </div>
+  </section>
+  <br />
+  <section class="section">
+    <div class="container">
+      <p-divider>
+        <span class="p-tag"> Colores</span>
+      </p-divider>
+      <cic-knob
+        [value]="number"
+        valueColor="#4895ef"
+        rangeColor="#7209b7"
+      ></cic-knob>
+      <br />
+      <div>
+        <cic-input type="textarea" controlName="textarea7"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea7')"
+        ></cic-button>
+      </div>
+    </div>
+    <div class="container">
+      <p-divider>
+        <span class="p-tag"> Size</span>
+      </p-divider>
+      <cic-knob [value]="number" [size]="200"></cic-knob>
+      <br />
+      <div>
+        <cic-input type="textarea" controlName="textarea8"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea8')"
+        ></cic-button>
+      </div>
+    </div>
+  </section>
+  <br />
+  <br />
+</form>

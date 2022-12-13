@@ -1,0 +1,10 @@
+<cic-sidebar></cic-sidebar>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<cic-toast
+  key="copy"
+  severity="info"
+  [showToast]="toasterService.showToaster.value"
+  [summary]="toasterService.message.value"
+></cic-toast>

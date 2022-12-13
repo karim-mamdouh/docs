@@ -1,0 +1,90 @@
+<section class="container">
+  <p-divider>
+    <span class="p-tag"> Basic</span>
+  </p-divider>
+  <cic-carousel
+    [data]="images"
+    [numVisible]="3"
+    [numScroll]="3"
+    [circular]="false"
+  ></cic-carousel>
+  <div [formGroup]="form">
+    <cic-input type="textarea" controlName="textarea1"></cic-input>
+    <cic-button
+      btnIcon="pi-copy"
+      label="Copy"
+      (click)="clicked('textarea1')"
+    ></cic-button>
+  </div>
+</section>
+<br /><br /><br />
+
+<!-- Responsive Options -->
+<section class="container">
+  <p-divider>
+    <span class="p-tag"> Responsive Options</span>
+  </p-divider>
+  <cic-carousel
+    [data]="images"
+    [circular]="false"
+    [numScroll]="0"
+    [responsiveOptions]="responsiveOptions"
+  >
+  </cic-carousel>
+  <div [formGroup]="form">
+    <cic-input type="textarea" controlName="textarea4"></cic-input>
+    <cic-button
+      btnIcon="pi-copy"
+      label="Copy"
+      (click)="clicked('textarea4')"
+    ></cic-button>
+  </div>
+</section>
+<br /><br /><br />
+<!-- Auto play -->
+<section class="container">
+  <p-divider>
+    <span class="p-tag"> Auto play</span>
+  </p-divider>
+  <cic-carousel
+    [data]="images"
+    [numVisible]="3"
+    [numScroll]="3"
+    [autoplayInterval]="2000"
+    [circular]="true"
+  >
+  </cic-carousel>
+  <div [formGroup]="form">
+    <cic-input type="textarea" controlName="textarea2"></cic-input>
+    <cic-button
+      btnIcon="pi-copy"
+      label="Copy"
+      (click)="clicked('textarea2')"
+    ></cic-button>
+  </div>
+</section>
+<br /><br /><br />
+<!-- Vertical -->
+<section class="container">
+  <p-divider>
+    <span class="p-tag"> Vertical</span>
+  </p-divider>
+  <cic-carousel
+    [data]="images"
+    [orientation]="'vertical'"
+    [style]="{ 'max-width': '400px', 'margin-top': '2em' }"
+    verticalViewPortHeight="352px"
+    [numVisible]="1"
+    [numScroll]="1"
+    [autoplayInterval]="0"
+    [circular]="true"
+  ></cic-carousel>
+  <div [formGroup]="form">
+    <cic-input type="textarea" controlName="textarea3"></cic-input>
+    <cic-button
+      btnIcon="pi-copy"
+      label="Copy"
+      (click)="clicked('textarea3')"
+    ></cic-button>
+  </div>
+</section>

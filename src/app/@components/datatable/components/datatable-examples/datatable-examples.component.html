@@ -1,0 +1,35 @@
+<cic-data-table
+  [data]="data"
+  [tableColumns]="headers"
+  captionMessage="Table Caption"
+  summaryMessage="Table Summary"
+  (stateChange)="clicked($event)"
+  [paginate]="true"
+  [rowsCountPerPage]="3"
+  [rowsPerPageOptions]="[3, 5]"
+  [hasAddButton]="true"
+  [isScrollable]="true"
+  [scrollHeight]="250"
+>
+</cic-data-table>
+
+<form [formGroup]="form">
+  <div class="form-group">
+    <cic-input
+      controlName="textarea1"
+      type="textarea"
+      label="HTML Code"
+      [autoSize]="true"
+      [rows]="3"
+    ></cic-input>
+  </div>
+  <div class="form-group">
+    <cic-input
+      controlName="textarea2"
+      type="textarea"
+      label="TS Code"
+      [autoSize]="true"
+      [rows]="76"
+    ></cic-input>
+  </div>
+</form>

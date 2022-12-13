@@ -1,0 +1,39 @@
+<div class="container">
+  <p-divider>
+    <span class="p-tag"> Dynamic Values</span>
+  </p-divider>
+  <form [formGroup]="form">
+    <cic-checkbox
+      controlName="data"
+      class="checkbox"
+      [data]="categories"
+    ></cic-checkbox>
+
+    <div class="text">
+      <cic-input type="textarea" controlName="textarea1"></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea1')"
+      ></cic-button>
+    </div>
+  </form>
+</div>
+<div class="container">
+  <p-divider>
+    <span class="p-tag"> Two Way Binding</span>
+  </p-divider>
+  <cic-checkbox
+    [value]="checked"
+    [data]="categories"
+    class="checkbox"
+  ></cic-checkbox>
+  <div class="text" [formGroup]="form">
+    <cic-input type="textarea" controlName="textarea2"></cic-input>
+    <cic-button
+      btnIcon="pi-copy"
+      label="Copy"
+      (click)="clicked('textarea2')"
+    ></cic-button>
+  </div>
+</div>

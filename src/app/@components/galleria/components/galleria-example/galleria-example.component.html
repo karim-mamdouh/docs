@@ -1,0 +1,417 @@
+<form [formGroup]="form">
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Basic</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [data]="images"
+          [numVisible]="4"
+          [style]="{ width: '600px' }"
+        ></cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea1"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea1')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <!-- Responsive Options -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Responsive Options</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [data]="images"
+          [responsiveOptions]="responsiveOptions"
+          [showThumbnails]="true"
+        ></cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea2"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea2')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Thumbnail Position lef|right|top|</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [data]="images"
+          [numVisible]="3"
+          thumbnailsPosition="top"
+          [style]="{ width: '600px' }"
+        >
+        </cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea3"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea3')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Auto Play</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [data]="images"
+          [transitionInterval]="2000"
+          [numVisible]="4"
+          [autoPlay]="true"
+          [circular]="true"
+          [style]="{ width: '600px' }"
+        ></cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea4"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea4')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Thumbnail Position lef|right|top|</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [data]="images"
+          [circular]="true"
+          [showThumbnails]="false"
+          [showItemNavigators]="true"
+          [numVisible]="4"
+          [style]="{ width: '65%' }"
+        ></cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea5"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea5')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Galleria Programmatic</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [data]="images"
+          [numVisible]="4"
+          [mode]="'programmatic'"
+          [style]="{ width: '500px' }"
+        >
+        </cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea6"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea6')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Indictor</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [mode]="'Indicators'"
+          [data]="images"
+          [numVisible]="4"
+          [showThumbnails]="false"
+          [showIndicators]="true"
+          [style]="{ width: '500px' }"
+        ></cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea7"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea7')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Indictor with Hover Event</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [mode]="'Indicators'"
+          [data]="images"
+          [numVisible]="4"
+          [changeItemOnIndicatorHover]="true"
+          [showThumbnails]="false"
+          [showIndicators]="true"
+          [style]="{ width: '500px' }"
+        ></cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea9"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea9')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Inside Content</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [mode]="'Indicators'"
+          [data]="images"
+          [showIndicatorsOnItem]="true"
+          [numVisible]="4"
+          [changeItemOnIndicatorHover]="false"
+          [showThumbnails]="false"
+          [showIndicators]="true"
+          [style]="{ width: '500px' }"
+        ></cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea10"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea10')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <!-- Template Position lef|right|top|----- -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Template Position lef|right|top</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [mode]="'indicatorsPosition'"
+          [data]="images"
+          [showIndicatorsOnItem]="true"
+          [numVisible]="4"
+          [changeItemOnIndicatorHover]="false"
+          indicatorsPosition="top"
+          [showThumbnails]="false"
+          [showIndicators]="true"
+          [style]="{ width: '500px' }"
+        ></cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea11"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea11')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <!-- Full Screen----- -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Full Screen</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [mode]="'fullScreen'"
+          [data]="images"
+          [numVisible]="4"
+          [fullScreen]="true"
+          [showThumbnails]="true"
+          [showItemNavigators]="true"
+          [circular]="true"
+          [baseZIndex]="100000"
+          [style]="{ width: '500px' }"
+        >
+        </cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea12"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea12')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <!-- Full Screen Custom----- -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Full Screen Custom</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [mode]="'fullScreenCustom'"
+          [data]="images"
+          [numVisible]="4"
+          [fullScreen]="true"
+          [showThumbnails]="false"
+          [showItemNavigators]="true"
+          [circular]="true"
+          [baseZIndex]="100000"
+          [style]="{ 'max-width': '850px' }"
+        ></cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea13"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea13')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Full Screen Custom</span>
+    </p-divider>
+    <div class="content">
+      <section>
+        <cic-galleria
+          [mode]="'advanced'"
+          [data]="images"
+          [numVisible]="5"
+          [fullScreen]="true"
+          [showThumbnails]="true"
+          [showItemNavigators]="true"
+          [circular]="true"
+          [transitionInterval]="3000"
+          [autoPlay]="true"
+          [style]="{ 'max-width': '640px' }"
+        ></cic-galleria>
+      </section>
+      <div>
+        <cic-input
+          style="display: block"
+          type="textarea"
+          controlName="textarea13"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          label="Copy"
+          (click)="clicked('textarea13')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+</form>

@@ -1,0 +1,43 @@
+nav {
+  width: 250px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  // border-right: 2px solid #eaecef;
+  background-color: #eff3f8a8;
+  img {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.nav__links {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+
+  li {
+    font-weight: 600;
+    height: max-content;
+  }
+}
+.active {
+  a {
+    color: #497174;
+  }
+}
+a {
+  text-decoration: none;
+  //width: 100%;
+  display: block;
+  padding: 10px 0 10px 20px;
+}
+a:visited,
+a {
+  color: #495057;
+}
+
+
+

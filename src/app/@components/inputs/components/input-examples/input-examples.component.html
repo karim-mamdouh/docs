@@ -1,0 +1,267 @@
+<form [formGroup]="form">
+  <!-- Input with float label -->
+  <div class="container">
+    <p-divider >
+      <div class="inline-flex align-items-center">
+        <b>Input with floatlabel</b>
+    </div>
+    </p-divider>
+    <div class="input-group">
+      <cic-input
+        controlName="floatLabel"
+        label="Input with floatlabel"
+        placeholder="Input with floatlabel"
+        [floatLabel]="true"
+      ></cic-input>
+      <div>
+        <cic-input type="textarea" controlName="textarea2"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea2')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input with Icon & float label -->
+  <div class="container">
+    <p-divider>
+      <div class="inline-flex align-items-center">
+        <b>Input with Icon & float label</b>
+    </div>
+    </p-divider>
+    <div class="input-group">
+      <cic-input
+        controlName="withIcon"
+        label="Input Icon & float label"
+        placeholder="Input with Icon"
+        icon="pi-search"
+        iconPos="left"
+        [floatLabel]="true"
+      ></cic-input>
+      <div>
+        <cic-input
+          type="textarea"
+          controlName="textarea3"
+          [autoSize]="true"
+          [rows]="4"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea3')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Password Input -->
+  <div class="container">
+    <p-divider>
+      <div class="inline-flex align-items-center">
+        <b>Password Input</b>
+    </div>
+    </p-divider>
+    <div class="input-group">
+      <cic-input
+        type="password"
+        controlName="password"
+        label="Password Input"
+        placeholder="Password Input"
+        [floatLabel]="true"
+      ></cic-input>
+      <div>
+        <cic-input type="textarea" controlName="textarea4"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea4')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Password Input with toggle mask -->
+  <div class="container">
+    <p-divider>
+      <div class="inline-flex align-items-center">
+        <b>Password Input with toggle mask</b>
+    </div>
+    </p-divider>
+    <div class="input-group">
+      <cic-input
+        type="password"
+        controlName="password"
+        label="Password Input"
+        [toggleMask]="true"
+        placeholder="Password Input"
+        [floatLabel]="true"
+      ></cic-input>
+      <div>
+        <cic-input
+          type="textarea"
+          controlName="textarea8"
+          [autoSize]="true"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea8')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Password Input without toggle mask and feedback -->
+  <div class="container">
+    <p-divider>
+      <div class="inline-flex align-items-center">
+        <b>Password Input without toggle mask and feedback</b>
+    </div>
+    </p-divider>
+    <div class="input-group">
+      <cic-input
+        type="password"
+        controlName="password"
+        label="Password Input"
+        [passwordFeedback]="false"
+        placeholder="Password Input"
+        [floatLabel]="true"
+      ></cic-input>
+      <div>
+        <cic-input
+          type="textarea"
+          controlName="textarea9"
+          [autoSize]="true"
+          [rows]="3"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea9')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chips Input -->
+  <div class="container">
+    <p-divider>
+      <div class="inline-flex align-items-center">
+        <b>Chips Input</b>
+    </div>
+    </p-divider>
+    <div class="input-group">
+      <cic-input
+        type="chips"
+        controlName="chip"
+        label="Chips Input"
+        placeholder="Chips Input"
+        [floatLabel]="true"
+      ></cic-input>
+      <div>
+        <cic-input type="textarea" controlName="textarea5"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea5')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Different sizes -->
+  <div class="container">
+    <p-divider>
+      <div class="inline-flex align-items-center">
+        <b>Different sizes</b>
+    </div>
+    </p-divider>
+    <div class="sizes">
+    <div class="input-group">
+      <cic-input
+        controlName="size"
+        placeholder="Large size"
+        label="Large size"
+        size="lg"
+        [floatLabel]="true"
+      ></cic-input>
+      <div>
+        <cic-input type="textarea" controlName="textarea6"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea6')"
+        ></cic-button>
+      </div>
+    </div>
+    <div class="input-group">
+      <cic-input
+        controlName="size"
+        placeholder="Small size"
+        label="Small size"
+        size="sm"
+        [floatLabel]="true"
+      ></cic-input>
+      <div>
+        <cic-input type="textarea" controlName="textarea7"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea7')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Basic Input -->
+  <div class="container">
+    <p-divider>
+      <div class="inline-flex align-items-center">
+        <b>Basic Input</b>
+    </div>
+    </p-divider>
+    <div class="input-group">
+      <cic-input
+        controlName="basic"
+        placeholder="Basic Input"
+        label="Basic"
+      ></cic-input>
+      <div>
+        <cic-input type="textarea" controlName="textarea1"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea1')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Textarea Input -->
+  <div class="container">
+    <p-divider>
+      <div class="inline-flex align-items-center">
+        <b>Textarea Input with float label</b>
+    </div>
+    </p-divider>
+    <div class="input-group">
+      <cic-input
+        controlName="basic"
+        [floatLabel]="true"
+        placeholder="Textarea Input"
+        label="Textarea"
+        type="textarea"
+      ></cic-input>
+      <div>
+        <cic-input type="textarea" controlName="textarea10"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          
+          (click)="clicked('textarea10')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+</form>

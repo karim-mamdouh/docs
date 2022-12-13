@@ -1,0 +1,257 @@
+<form [formGroup]="form">
+  <!-- Basic calendar -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Basic Calendar</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-calendar controlName="basic" label="Basic"></cic-calendar>
+      <div>
+        <cic-input type="textarea" controlName="textarea1"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          (click)="clicked('textarea1')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Basic time with float label -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Basic time with float label</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-calendar
+        controlName="basic"
+        label="Basic time"
+        mode="time"
+        placeholder="Pick time"
+        [floatLabel]="true"
+      ></cic-calendar>
+      <div>
+        <cic-input type="textarea" controlName="textarea2"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          (click)="clicked('textarea2')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Time with hour format -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Basic time with hour format</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-calendar
+        controlName="basic"
+        label="Basic time"
+        mode="time"
+        timeFormat="24"
+        placeholder="Pick time"
+        [floatLabel]="true"
+      ></cic-calendar>
+      <div>
+        <cic-input type="textarea" controlName="textarea3"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          (click)="clicked('textarea3')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Month format -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Month only</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-calendar
+        controlName="basic"
+        label="Month only"
+        mode="month"
+        placeholder="Pick month"
+        [floatLabel]="true"
+      ></cic-calendar>
+      <div>
+        <cic-input type="textarea" controlName="textarea4"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          (click)="clicked('textarea4')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Year format -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Year only</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-calendar
+        controlName="basic"
+        label="Year only"
+        mode="year"
+        placeholder="Pick Year"
+        [floatLabel]="true"
+      ></cic-calendar>
+      <div>
+        <cic-input type="textarea" controlName="textarea5"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          (click)="clicked('textarea5')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Date time format -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Date time format</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-calendar
+        controlName="basic"
+        label="Date time format"
+        mode="date-time"
+        placeholder="Pick date"
+        [floatLabel]="true"
+      ></cic-calendar>
+      <div>
+        <cic-input type="textarea" controlName="textarea6"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          (click)="clicked('textarea6')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Date time format with icon and buttons -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Date time format with icon and buttons</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-calendar
+        controlName="basic"
+        label="Date time format"
+        mode="date-time"
+        [showButtons]="true"
+        [showCalendarIcon]="true"
+        placeholder="Pick date"
+        [floatLabel]="true"
+      ></cic-calendar>
+      <div>
+        <cic-input
+          type="textarea"
+          controlName="textarea7"
+          [autoSize]="true"
+          [rows]="3"
+        ></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          (click)="clicked('textarea7')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calendar with weeks -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Calendar with weeks</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-calendar
+        controlName="basic"
+        label="Calendar with weeks"
+        [showWeeks]="true"
+        [showCalendarIcon]="true"
+        placeholder="Pick date"
+        [floatLabel]="true"
+      ></cic-calendar>
+      <div>
+        <cic-input type="textarea" controlName="textarea8"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          (click)="clicked('textarea8')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Range picker -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Range picker</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-calendar
+        controlName="basic"
+        label="Range picker"
+        mode="range"
+        placeholder="Pick dates"
+        [floatLabel]="true"
+      ></cic-calendar>
+      <div>
+        <cic-input type="textarea" controlName="textarea9"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          (click)="clicked('textarea9')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editable calendar -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Editable calendar</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-calendar
+        controlName="basic"
+        label="Editable calendar"
+        [readOnly]="false"
+        placeholder="Pick date"
+        [floatLabel]="true"
+      ></cic-calendar>
+      <div>
+        <cic-input type="textarea" controlName="textarea10"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          (click)="clicked('textarea10')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom dateformat -->
+  <div class="container">
+    <p-divider>
+      <span class="p-tag">Custom dateformat</span>
+    </p-divider>
+    <div class="input-group">
+      <cic-calendar
+        controlName="basic"
+        label="Custom dateformat"
+        placeholder="Pick date"
+        [floatLabel]="true"
+        dateFormat="dd-M-yy"
+      ></cic-calendar>
+      <div>
+        <cic-input type="textarea" controlName="textarea11"></cic-input>
+        <cic-button
+          btnIcon="pi-copy"
+          (click)="clicked('textarea11')"
+        ></cic-button>
+      </div>
+    </div>
+  </div>
+</form>

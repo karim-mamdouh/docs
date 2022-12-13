@@ -1,0 +1,22 @@
+<h1>Input</h1>
+<p>CIC-Input is a generic component that contains all input formats & types</p>
+<h3>Import</h3>
+<div class="container">
+  <code>{{ "import { CICInputModule } from 'cic-core-library'" }}</code>
+</div>
+
+<h3>Basic usage</h3>
+<p class="subtitle">
+  Component needs to be wrapped with
+  <span>form group ('form') & form control name ('formControl')</span> should be
+  provided
+</p>
+<div class="container">
+  <code>{{ usage }}</code>
+</div>
+
+<div class="table-container">
+  <cic-data-table [tableColumns]="propertyHeaders" [data]="properties">
+    <ng-container caption><h3>Properties</h3></ng-container>
+  </cic-data-table>
+</div>

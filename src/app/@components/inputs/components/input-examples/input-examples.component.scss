@@ -1,0 +1,40 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .container {
+
+  }
+}
+.sizes{
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+.input-group {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 25px;
+  align-items: center;
+  
+  background-color: rgba(239, 243, 248, 0.6470588235);
+  padding: 20px 20px;
+  border-radius: 20px;
+
+  div {
+    display: flex;
+    width: 70%;
+    gap: 10px;
+    align-items: flex-end;
+  }
+  .input-sizes {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+}
+// ::ng-deep .p-inputtextarea .p-inputtext .p-component .p-element {
+//   flex-grow: 1;
+// }

@@ -1,0 +1,20 @@
+<div class="container">
+  <p-divider>
+    <span class="p-tag"> Dynamic Values</span>
+  </p-divider>
+  <form [formGroup]="form">
+    <cic-radio-button
+      controlName="city"
+      [data]="data"
+      class="radio"
+    ></cic-radio-button>
+    <br />
+    <div>
+      <cic-input
+        type="textarea"
+        controlName="textarea2"
+        [styleClass]="'cheak L'"
+      ></cic-input>
+    </div>
+  </form>
+</div>

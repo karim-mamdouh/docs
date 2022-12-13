@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="text">
+    <p-divider>
+      <span class="p-tag"> Basic</span>
+    </p-divider>
+    <cic-fieldset [data]="data"></cic-fieldset>
+  </div>
+  <div [formGroup]="form">
+    <cic-input
+      styleClass="cheak"
+      type="textarea"
+      controlName="textarea1"
+    ></cic-input>
+  </div>
+</div>
+<div class="container">
+  <div class="text">
+    <p-divider>
+      <span class="p-tag"> Toggleable</span>
+    </p-divider>
+    <cic-fieldset [data]="data2"></cic-fieldset>
+  </div>
+  <div [formGroup]="form">
+    <cic-input
+      styleClass="cheak"
+      type="textarea"
+      controlName="textarea2"
+    ></cic-input>
+  </div>
+</div>
+<div class="container">
+  <div class="text">
+    <p-divider>
+      <span class="p-tag"> Set data of Array</span>
+    </p-divider>
+    <cic-fieldset [data]="data3"></cic-fieldset>
+  </div>
+  <div [formGroup]="form">
+    <cic-input
+      styleClass="cheak L"
+      type="textarea"
+      controlName="textarea3"
+    ></cic-input>
+  </div>
+</div>

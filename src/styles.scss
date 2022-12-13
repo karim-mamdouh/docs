@@ -1,0 +1,173 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.cheak{
+  height: 10rem;
+  overflow: hidden;
+
+  } .L{
+    height:12rem
+   }
+
+  .styleEditor{
+    height: 300px;
+  }
+  .styleText{
+height: 7rem;
+  }
+app-root,
+cic-sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+app-root {
+  flex-direction: row !important;
+}
+
+cic-sidebar {
+  min-height: 100%;
+  flex-grow: 0 !important;
+}
+
+cic-input,
+cic-passwordinput {
+  flex-grow: 1;
+  align-items: center;
+  display: flex;
+}
+cic-textarea {
+  flex-grow: 1;
+}
+textarea {
+  color: black !important;
+  font-weight: 600 !important;
+  .p-inputtextarea {
+    width: 100% !important;
+  }
+}
+form {
+  cic-button {
+    height: 100% !important;
+    display: flex;
+    align-items: flex-end;
+    button {
+      margin-bottom: 6.5px !important;
+    }
+  }
+}
+cic-textinput {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+.p-tag {
+  font-size: 0.9rem;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.p-inputtext {
+  width: 100%;
+}
+.p-password-input {
+  width: 100%;
+}
+nav {
+  form {
+    cic-textinput {
+      max-width: 90% !important;
+      margin: 0 auto 2rem;
+      .p-inputtext {
+        width: 100% !important;
+      }
+    }
+  }
+}
+.p-divider {
+  margin-top: 10px !important;
+}
+.p-divider .p-divider-content {
+  background-color: white;
+}
+
+.p-float-label {
+  margin-top: 0.4rem;
+}
+.p-chips {
+  max-width: 20rem;
+}
+.p-input-icon-left {
+  width: 80%;
+}
+cic-calendar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.p-inputtextarea-resizable {
+  height: auto !important;
+}
+
+.details-container {
+  margin-top: 50px;
+  .p-tabview-panels {
+    padding: 0 !important;
+  }
+  .table-container {
+    margin-top: 30px !important;
+  }
+}
+.p-button.p-button-icon-only {
+  width: 3rem;
+}
+.p-button.p-button-info, .p-buttonset.p-button-info > .p-button, .p-splitbutton.p-button-info > .p-button {
+  color: #ffffff;
+  background: #EB6440;
+  border: 1px solid #EB6440;
+}
+.p-tag {
+  background: #497174;
+}
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background: #ffffff;
+  border-color: #EB6440;
+  color: #EB6440;
+  outline: none;
+}
+.radio{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  }
+.checkbox{
+  display: grid;
+  gap:10px
+}
+.p-accordion .p-accordion-content {
+  padding-top: 0 !important;
+  border:none !important;
+  background: transparent !important;
+}
+.p-accordion .p-accordion-header .p-accordion-header-link  {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+.p-accordion .p-accordion-header:not(.p-disabled) .p-accordion-header-link:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: none !important;
+}

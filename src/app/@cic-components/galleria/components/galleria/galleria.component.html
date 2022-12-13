@@ -1,0 +1,154 @@
+<ng-container [ngSwitch]="mode">
+
+  <p-galleria *ngSwitchDefault [value]="data" [responsiveOptions]="responsiveOptions" [containerStyle]="style"
+    [numVisible]="numVisible" [showIndicators]="showIndicators" [showThumbnails]="showThumbnails"
+    [changeItemOnIndicatorHover]="changeItemOnIndicatorHover" [showIndicatorsOnItem]="showIndicatorsOnItem"
+    [indicatorsPosition]="indicatorsPosition" [thumbnailsPosition]="thumbnailsPosition"
+    [showItemNavigators]="showItemNavigators" [circular]="circular" [autoPlay]="autoPlay"
+    [transitionInterval]="transitionInterval">
+    <ng-template pTemplate="item" let-item>
+      <img [src]="item?.previewImageSrc" style="width: 100%;" />
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+      <div class="grid grid-nogutter justify-content-center">
+        <img [src]="item.thumbnailImageSrc" />
+      </div>
+    </ng-template>
+  </p-galleria>
+
+  <!-------------------- Galleria Caption ------------->
+  <p-galleria *ngSwitchCase="'caption'" [value]="data" [responsiveOptions]="responsiveOptions" [containerStyle]="style"
+    [numVisible]="numVisible">
+    <ng-template pTemplate="item" let-item>
+      <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+      <div class="grid grid-nogutter justify-content-center">
+        <img [src]="item.thumbnailImageSrc" style="display: block;" />
+      </div>
+    </ng-template>
+    <ng-template pTemplate="caption" let-item>
+      <h4 style="margin-bottom: .5rem; color: #ffffff;">{{item.title}}</h4>
+      <p>{{item.alt}}</p>
+    </ng-template>
+  </p-galleria>
+
+  <!-------------------- Galleria fullScreen  ------------->
+  <div *ngSwitchCase="'fullScreen'">
+    <p-galleria [value]="data" [visible]="_displayBasic" [responsiveOptions]="responsiveOptions"
+      [containerStyle]="style" [numVisible]="numVisible" [circular]="circular" [fullScreen]="fullScreen"
+      [showItemNavigators]="showItemNavigators" [showThumbnails]="showThumbnails" [baseZIndex]="baseZIndex">
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+          <img [src]="item.thumbnailImageSrc" style="display: block;" />
+        </div>
+      </ng-template>
+    </p-galleria>
+    <cic-button pButton btnIcon="pi-external-link" label="Show" (click)="_displayBasic = !_displayBasic "></cic-button>
+  </div>
+
+
+  <!-------------------- Galleria fullScreen Custom ------------->
+  <div *ngSwitchCase="'fullScreenCustom'">
+    <p-galleria [value]="data" [visible]="_displayCustom" [activeIndex]="activeIndex"
+      [responsiveOptions]="responsiveOptions" [containerStyle]="style" [numVisible]="numVisible" [circular]="circular"
+      [fullScreen]="fullScreen" [showItemNavigators]="showItemNavigators" [showThumbnails]="showThumbnails"
+      [baseZIndex]="baseZIndex">
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+          <img [src]="item.thumbnailImageSrc" style="display: block;" />
+        </div>
+      </ng-template>
+    </p-galleria>
+    <div *ngIf="data" class="grid" style="max-width: 400px;">
+      <div *ngFor="let image of data; let index = index;" class="col-3" key="index">
+        <img [src]="image.thumbnailImageSrc" [alt]="image.alt" style="cursor: pointer" (click)="imageClick(index)" />
+      </div>
+    </div>
+  </div>
+
+  <!--=------------------ Galleria Programmatic ------------->
+  <div *ngSwitchCase="'programmatic'">
+    <div>
+      <cic-button style="padding-right:1rem;" pButton btnIcon="pi-plus" (click)="next()"></cic-button>
+      <cic-button pButton btnIcon="pi-minus" (click)="prev()"></cic-button>
+    </div>
+    <p-galleria [value]="data" [responsiveOptions]="responsiveOptions" [containerStyle]="style"
+      [numVisible]="numVisible" [circular]="circular" [showItemNavigators]="showItemNavigators"
+      [activeIndex]="ProgrammaticIndex">
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%;" />
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+          <img [src]="item.thumbnailImageSrc" />
+        </div>
+      </ng-template>
+    </p-galleria>
+  </div>
+  <!--=------------------ Indicators ------------->
+  <div *ngSwitchCase="'Indicators'">
+    <p-galleria [value]="data" [responsiveOptions]="responsiveOptions" [containerStyle]="style"
+      [showIndicatorsOnItem]="showIndicatorsOnItem" [numVisible]="numVisible" [circular]="circular"
+      [showItemNavigators]="showItemNavigators" [changeItemOnIndicatorHover]="changeItemOnIndicatorHover"
+      [showThumbnails]="showThumbnails" [showIndicators]="showIndicators">
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+          <img [src]="item.thumbnailImageSrc" style="display: block;" />
+        </div>
+      </ng-template>
+    </p-galleria>
+  </div>
+  <!--=------------------ Indicators Position ------------->
+  <div *ngSwitchCase="'indicatorsPosition'">
+    <p-galleria [value]="data" [responsiveOptions]="responsiveOptions" [containerStyle]="style"
+      [indicatorsPosition]="indicatorsPosition" [showIndicatorsOnItem]="showIndicatorsOnItem" [numVisible]="numVisible"
+      [circular]="circular" [showItemNavigators]="showItemNavigators"
+      [changeItemOnIndicatorHover]="changeItemOnIndicatorHover" [showThumbnails]="showThumbnails"
+      [showIndicators]="showIndicators">
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+          <img [src]="item.thumbnailImageSrc" style="display: block;" />
+        </div>
+      </ng-template>
+    </p-galleria>
+  </div>
+  <div *ngSwitchCase="'advanced'">
+    <p-galleria #galleria [value]="data" [activeIndex]="activeIndex" [numVisible]="numVisible" [containerStyle]="style"
+      [containerClass]="galleriaClass()" [showThumbnails]="showThumbnails" [showItemNavigators]="showItemNavigators"
+      [circular]="circular" [autoPlay]="autoPlay" [transitionInterval]="transitionInterval">
+      <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc"
+          [ngStyle]="{'width': !fullscreen ? '100%' : '', 'display': !fullscreen ? 'block' : ''}" />
+      </ng-template>
+      <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+          <img [src]="item.thumbnailImageSrc" />
+        </div>
+      </ng-template>
+      <ng-template pTemplate="footer" let-item>
+        <div class="custom-galleria-footer">
+          <button type="button" pButton  (click)="toggleFullScreen()" class="fullscreen-button"></button>
+          <span *ngIf="data" class="title-container">
+            <span>{{activeIndex + 1}}/{{data.length}}</span>
+            <span class="title">{{data[activeIndex].title}}</span>
+            <span>{{data[activeIndex].alt}}</span>
+          </span>
+          <cic-button severity="secondary" [btnIcon]="fullScreenIcon()" (click)="toggleFullScreen()"></cic-button>
+        </div>
+      </ng-template>
+    </p-galleria>
+  </div>
+</ng-container>

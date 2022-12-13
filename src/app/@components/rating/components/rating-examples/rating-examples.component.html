@@ -1,0 +1,110 @@
+<form [formGroup]="form">
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Basic</span>
+    </p-divider>
+    <cic-rating
+      controlName="number"
+      [stars]="10"
+      [showCancel]="true"
+    ></cic-rating>
+    <br />
+    <div>
+      <cic-input type="textarea" controlName="textarea1"></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea1')"
+      ></cic-button>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> RedOnly</span>
+    </p-divider>
+    <cic-rating
+      controlName="number"
+      [stars]="10"
+      [readonly]="true"
+      [showCancel]="false"
+    ></cic-rating>
+    <br />
+    <div>
+      <cic-input type="textarea" controlName="textarea2"></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea2')"
+      ></cic-button>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Disabled</span>
+    </p-divider>
+    <cic-rating
+      controlName="number"
+      [stars]="10"
+      [readonly]="true"
+      [showCancel]="true"
+    ></cic-rating>
+    <br />
+    <div>
+      <cic-input type="textarea" controlName="textarea3"></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea3')"
+      ></cic-button>
+    </div>
+  </div>
+  <br /><br />
+  <div class="container">
+    <p-divider>
+      <span class="p-tag"> Template</span>
+    </p-divider>
+    <cic-rating
+      controlName="number"
+      [stars]="10"
+      [showCancel]="true"
+      cancelIconClass="pi-times"
+      onIconClass="pi-heart-fill"
+      offIconClass="pi-heart"
+    ></cic-rating>
+    <br />
+    <div>
+      <cic-input type="textarea" controlName="textarea4"></cic-input>
+      <cic-button
+        btnIcon="pi-copy"
+        label="Copy"
+        (click)="clicked('textarea4')"
+      ></cic-button>
+    </div>
+  </div>
+</form>
+<div class="container">
+  <p-divider>
+    <span class="p-tag"> Two way binding</span>
+  </p-divider>
+  <cic-rating
+    [value]="value"
+    [stars]="20"
+    [showCancel]="true"
+    cancelIconClass="pi-minus-circle"
+    onIconClass="pi-heart-fill"
+    offIconClass="pi-heart"
+  ></cic-rating>
+  <br />
+  <div [formGroup]="form">
+    <cic-input type="textarea" controlName="textarea5"></cic-input>
+    <cic-button
+      btnIcon="pi-copy"
+      label="Copy"
+      (click)="clicked('textarea5')"
+    ></cic-button>
+  </div>
+</div>
