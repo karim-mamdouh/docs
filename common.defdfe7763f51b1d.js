@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeshtri_core=self.webpackChunkeshtri_core||[]).push([[592],{5701:(a,s,r)=>{r.d(s,{G3:()=>o,yM:()=>n});const o=(e,c,t,u)=>({name:e,type:c,defaultValue:t,description:u}),n=(e,c,t)=>({name:e,type:c,description:t})}}]);
